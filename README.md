@@ -112,18 +112,3 @@ FROM project.games_paid_users gpu
 LEFT JOIN payment_data pd ON pd.user_id = gpu.user_id AND pd.game_name = gpu.game_name
 WHERE pd.payment_month NOT IN (SELECT MAX(payment_month) FROM payment_data);
 ```
-
-## How to Use
-
-1. **Data Extraction:** The provided SQL code extracts the necessary data from the database.
-2. **Data Visualization:** The extracted data is visualized in Tableau to show trends in revenue, user behavior, and churn.
-3. **Analysis:** Use the visualizations to analyze the changes in revenue and user base over time, drawing actionable insights.
-
-## Requirements
-
-- Tableau for data visualization.
-- SQL database containing in-game payment data.
-
-## License
-
-This project is licensed under the MIT License.
